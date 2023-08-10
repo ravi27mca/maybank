@@ -12,7 +12,7 @@ public class PrimaryAnnotatioSampleController {
 
 
     @Autowired
-    public Car car;
+    public Car car; 
 
     @GetMapping("/car1")
     public String fetchCharectorstics() {
