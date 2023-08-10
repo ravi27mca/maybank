@@ -1,21 +1,19 @@
 package com.m2u.maybank.controller;
 
-import com.m2u.maybank.services.interfaces.Animal;
+import com.m2u.maybank.services.interfaces.AutowireByName;
 import com.m2u.maybank.services.interfaces.Car;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/car")
-public class PrimaryAnnotatioSampleController {
-
+@RestController("/autowireByname")
+public class AutowireByNameController {
 
     @Autowired
-    public Car car;
+    public AutowireByName autowireByNameService;
 
-    @GetMapping("/car1")
+    @GetMapping("/test")
     public String fetchCharectorstics() {
-        return car.charectertsics();
+        return autowireByNameService.autowireByName();
     }
 }
